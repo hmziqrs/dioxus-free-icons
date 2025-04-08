@@ -54,3 +54,6 @@ pub mod md_social_icons;
 pub mod md_toggle_icons;
 #[cfg(feature = "codicons")]
 pub mod vsc_icons;
+
+#[cfg(feature = "simple-icons")]
+pub mod si_icons;

@@ -76,4 +76,7 @@ fn main() {
     const VS_SVG_BASE_PATH: &str = "../../icon_resources/vscode-codicons/src/icons";
     let vs_output_path = format!("{}/vsc_icons.rs", OUTPUT_BASE_PATH);
     create_icon_file::create_icon_file(VS_SVG_BASE_PATH, &vs_output_path, "Vsc");
+    const SI_SVG_BASE_PATH: &str = "../../icon_resources/simple-icons/icons";
+    let ld_output_path = format!("{}/si_icons.rs", OUTPUT_BASE_PATH);
+    create_icon_file::create_icon_file(SI_SVG_BASE_PATH, &ld_output_path, "Si");
 }

@@ -25,3 +25,6 @@
 [submodule "icon_resources/vscode-codicons"]
 	path = icon_resources/vscode-codicons
 	url = https://github.com/microsoft/vscode-codicons.git
+[submodule "icon_resources/simple-icons"]
+	path = icon_resources/simple-icons
+	url = https://github.com/simple-icons/simple-icons
