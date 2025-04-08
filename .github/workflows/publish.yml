@@ -1,18 +1,37 @@
 name: Cargo Publish
 
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
+  push:
+    branches: [ "cargo" ]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  publish:
-    name: Publish to crate.io
+  # First run the CI job
+  build_and_test:
+    name: Build and Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install the nightly toolchain
+        uses: dtolnay/rust-toolchain@nightly
+      - name: Install linux dependencies
+        run: |
+          sudo apt update && sudo apt install build-essential libssl-dev pkg-config libglib2.0-dev libgtk-3-dev
+      - run: cargo build --verbose
+      - run: cargo test --verbose
+
+  # Then run the publish job, only if build_and_test succeeds
+  publish:
+    name: Publish to crate.io
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install the nightly toolchain
+        uses: dtolnay/rust-toolchain@nightly
       - run: cargo publish
         working-directory: ./packages/lib
         env:
