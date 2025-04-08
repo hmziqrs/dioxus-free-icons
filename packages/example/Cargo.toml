@@ -1,14 +1,14 @@
 [package]
 name = "hello-dioxus"
 version = "0.1.0"
-authors = ["nissy-dev <nd.12021218@gmail.com>"]
+authors = ["hmziq <hmziqrs@gmail.com>"]
 edition = "2021"
 
 [dependencies]
 dioxus = { workspace = true, features = ["web"] }
-dioxus-free-icons = { path = "../lib", features = ["font-awesome-brands"] }
+hmziq-dioxus-free-icons = { path = "../lib", features = ["font-awesome-brands"] }
 
-log = "0.4.6"
+log = "0.4.16"
 
 # WebAssembly Debug
 wasm-logger = "0.2.0"
