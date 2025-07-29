@@ -1,6 +1,6 @@
 [package]
 name = "hmziq-dioxus-free-icons"
-version = "0.10.0-alpha.1"
+version = "0.10.1"
 edition = "2021"
 authors = ["Hmziq <hmziqrs@gmail.com>"]
 description = "Use free svg icons in your Dioxus projects easily with dioxus-free-icons."
