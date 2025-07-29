@@ -28,6 +28,3 @@
 [submodule "icon_resources/simple-icons"]
 	path = icon_resources/simple-icons
 	url = https://github.com/simple-icons/simple-icons
-[submodule "icon_resources/simple-icons"]
-	path = icon_resources/simple-icons
-	url = https://github.com/simple-icons/simple-icons
